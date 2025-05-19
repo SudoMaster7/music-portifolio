@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DON HU | Official Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Urbanist', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            overflow-x: hidden;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3a5a40 0%, #a3b18a 50%, #588157 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .merch-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(88, 129, 87, 0.3);
+        }
+        
+        .album-cover {
+            box-shadow: 0 0 50px rgba(88, 129, 87, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #a3b18a;
+        }
+        
+        .nav-link:hover {
+            color: #a3b18a;
+        }
+        
+        .countdown-number {
+            background: linear-gradient(135deg, #3a5a40 0%, #588157 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold gradient-text">DON HU</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link px-3 py-2 text-sm font-medium">HOME</a>
+                        <a href="#album" class="nav-link px-3 py-2 text-sm font-medium">ALBUM</a>
+                        <a href="#merch" class="nav-link px-3 py-2 text-sm font-medium">MERCH</a>
+                        <a href="#tour" class="nav-link px-3 py-2 text-sm font-medium">TOUR</a>
+                        <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium">CONTACT</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-spotify text-xl"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-apple text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="gradient-text">NEW ALBUM</span><br>
+                    <span class="text-white">"DARK JUNGLE"</span>
+                </h1>
+                <p class="text-gray-400 mb-8 text-lg max-w-lg">
+                    The most anticipated trap album of 2023. Produced by the legendary Don Hu, featuring Travis Scott, Future and more.
+                </p>
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <button class="bg-gradient-to-r from-green-700 to-green-500 hover:from-green-600 hover:to-green-400 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        PRE-ORDER NOW
+                    </button>
+                    <button class="border-2 border-green-600 hover:bg-green-900 hover:bg-opacity-20 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        LISTEN TO SINGLE
+                    </button>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon text-2xl"><i class="fab fa-spotify"></i></a>
+                    <a href="#" class="social-icon text-2xl"><i class="fab fa-apple"></i></a>
+                    <a href="#" class="social-icon text-2xl"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon text-2xl"><i class="fab fa-soundcloud"></i></a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="street.jpg" 
+                     alt="Album Cover" 
+                     class="album-cover rounded-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="py-16 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12 gradient-text">ALBUM RELEASE COUNTDOWN</h2>
+            <div class="flex justify-center gap-4 md:gap-8">
+                <div class="countdown-number w-20 h-20 md:w-24 md:h-24 rounded-lg flex flex-col items-center justify-center">
+                    <span class="text-2xl md:text-3xl font-bold" id="days">07</span>
+                    <span class="text-xs uppercase">Days</span>
+                </div>
+                <div class="countdown-number w-20 h-20 md:w-24 md:h-24 rounded-lg flex flex-col items-center justify-center">
+                    <span class="text-2xl md:text-3xl font-bold" id="hours">12</span>
+                    <span class="text-xs uppercase">Hours</span>
+                </div>
+                <div class="countdown-number w-20 h-20 md:w-24 md:h-24 rounded-lg flex flex-col items-center justify-center">
+                    <span class="text-2xl md:text-3xl font-bold" id="minutes">45</span>
+                    <span class="text-xs uppercase">Minutes</span>
+                </div>
+                <div class="countdown-number w-20 h-20 md:w-24 md:h-24 rounded-lg flex flex-col items-center justify-center">
+                    <span class="text-2xl md:text-3xl font-bold" id="seconds">30</span>
+                    <span class="text-xs uppercase">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Album Section -->
+    <section id="album" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4 gradient-text">DARK JUNGLE</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">The new era of trap music begins here. 16 tracks of pure energy and innovation.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-gray-900 bg-opacity-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-bold mb-6 text-green-500">TRACKLIST</h3>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center border-b border-gray-800 pb-3">
+                        <span class="font-medium">1. Jungle Intro (feat. Travis Scott)</span>
+                        <span class="text-gray-500">3:24</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-gray-800 pb-3">
+                        <span class="font-medium">2. Dark Dreams</span>
+                        <span class="text-gray-500">2:56</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-gray-800 pb-3">
+                        <span class="font-medium">3. Money Trees Pt. II</span>
+                        <span class="text-gray-500">3:42</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-gray-800 pb-3">
+                        <span class="font-medium">4. No Love (feat. Future)</span>
+                        <span class="text-gray-500">4:12</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-gray-800 pb-3">
+                        <span class="font-medium">5. Trap Symphony</span>
+                        <span class="text-gray-500">3:18</span>
+                    </li>
+                    <li class="flex justify-between items-center pb-3">
+                        <span class="text-gray-400">+ 11 more tracks</span>
+                        <button class="text-green-500 hover:text-green-400">VIEW ALL</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-gray-900 bg-opacity-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-bold mb-6 text-green-500">FEATURED ARTISTS</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1549213783-8284d0336c4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                                 alt="Travis Scott" class="w-full h-full object-cover">
+                        </div>
+                        <span>Travis Scott</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Future" class="w-full h-full object-cover">
+                        </div>
+                        <span>Future</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Don Toliver" class="w-full h-full object-cover">
+                        </div>
+                        <span>Don Toliver</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="21 Savage" class="w-full h-full object-cover">
+                        </div>
+                        <span>21 Savage</span>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-green-500">PRODUCED BY</h3>
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full bg-gray-800 overflow-hidden">
+                        <img src="street.jpg" 
+                             alt="Don Hu" class="w-full h-full object-cover">
+                    </div>
+                    <span class="font-bold">DON HU</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <button class="border-2 border-green-600 hover:bg-green-900 hover:bg-opacity-20 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                LISTEN TO THE SINGLE NOW
+            </button>
+        </div>
+    </section>
+
+    <!-- Merch Section -->
+    <section id="merch" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">OFFICIAL MERCH</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Limited edition merchandise. Get yours before it's gone.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Merch Item 1 -->
+                <div class="merch-item bg-gray-900 rounded-xl overflow-hidden transition-all duration-500">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Dark Jungle Hoodie" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">BESTSELLER</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">DARK JUNGLE HOODIE</h3>
+                        <p class="text-gray-400 mb-4">Limited edition embroidered hoodie</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">$79.99</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Merch Item 2 -->
+                <div class="merch-item bg-gray-900 rounded-xl overflow-hidden transition-all duration-500">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" 
+                             alt="Don Hu Signature Tee" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">DON HU SIGNATURE TEE</h3>
+                        <p class="text-gray-400 mb-4">Premium quality cotton t-shirt</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">$49.99</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Merch Item 3 -->
+                <div class="merch-item bg-gray-900 rounded-xl overflow-hidden transition-all duration-500">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" 
+                             alt="Album Cover Cap" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ALBUM COVER CAP</h3>
+                        <p class="text-gray-400 mb-4">Adjustable snapback with embroidery</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">$39.99</span>
+                            <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-green-600 hover:bg-green-900 hover:bg-opacity-20 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                    VIEW ALL MERCHANDISE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Section -->
+    <section id="tour" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4 gradient-text">UPCOMING TOUR DATES</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Don Hu is coming to your city. Get your tickets now.</p>
+        </div>
+        
+        <div class="space-y-4 max-w-4xl mx-auto">
+            <!-- Tour Date 1 -->
+            <div class="bg-gray-900 bg-opacity-50 hover:bg-opacity-70 rounded-xl p-6 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold">DARK JUNGLE TOUR</h3>
+                        <p class="text-gray-400">Los Angeles, CA • Crypto.com Arena</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6">
+                        <span class="text-green-500 font-bold">NOV 15, 2023</span>
+                        <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                            GET TICKETS
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tour Date 2 -->
+            <div class="bg-gray-900 bg-opacity-50 hover:bg-opacity-70 rounded-xl p-6 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold">DARK JUNGLE TOUR</h3>
+                        <p class="text-gray-400">New York, NY • Madison Square Garden</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6">
+                        <span class="text-green-500 font-bold">NOV 22, 2023</span>
+                        <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                            GET TICKETS
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tour Date 3 -->
+            <div class="bg-gray-900 bg-opacity-50 hover:bg-opacity-70 rounded-xl p-6 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold">DARK JUNGLE TOUR</h3>
+                        <p class="text-gray-400">Miami, FL • FTX Arena</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6">
+                        <span class="text-green-500 font-bold">DEC 5, 2023</span>
+                        <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                            GET TICKETS
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tour Date 4 -->
+            <div class="bg-gray-900 bg-opacity-50 hover:bg-opacity-70 rounded-xl p-6 transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold">DARK JUNGLE TOUR</h3>
+                        <p class="text-gray-400">Chicago, IL • United Center</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6">
+                        <span class="text-green-500 font-bold">DEC 12, 2023</span>
+                        <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                            GET TICKETS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <button class="border-2 border-green-600 hover:bg-green-900 hover:bg-opacity-20 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                VIEW ALL TOUR DATES
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">STAY CONNECTED</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Sign up for exclusive updates, presale tickets, and more.</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-gray-400 mb-2">First Name</label>
+                            <input type="text" id="first-name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="Your first name">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium text-gray-400 mb-2">Last Name</label>
+                            <input type="text" id="last-name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="Your last name">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="terms" type="checkbox" class="w-4 h-4 bg-gray-800 border border-gray-700 rounded focus:ring-green-600 focus:ring-2">
+                        <label for="terms" class="ml-2 text-sm text-gray-400">I agree to receive updates from Don Hu</label>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-green-700 to-green-500 hover:from-green-600 hover:to-green-400 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        SUBSCRIBE NOW
+                    </button>
+                </form>
+                
+                <div class="mt-12 flex flex-wrap justify-center gap-8">
+                    <div class="text-center">
+                        <div class="social-icon inline-flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full mb-3">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </div>
+                        <p class="text-gray-400">@donhuofficial</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="social-icon inline-flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full mb-3">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </div>
+                        <p class="text-gray-400">@donhu</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="social-icon inline-flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full mb-3">
+                            <i class="fab fa-spotify text-xl"></i>
+                        </div>
+                        <p class="text-gray-400">Don Hu</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="social-icon inline-flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full mb-3">
+                            <i class="fab fa-apple text-xl"></i>
+                        </div>
+                        <p class="text-gray-400">Don Hu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold gradient-text">DON HU</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-green-500">Home</a>
+                    <a href="#" class="text-gray-400 hover:text-green-500">Music</a>
+                    <a href="#" class="text-gray-400 hover:text-green-500">Tour</a>
+                    <a href="#" class="text-gray-400 hover:text-green-500">Merch</a>
+                    <a href="#" class="text-gray-400 hover:text-green-500">Contact</a>
+                    <a href="#" class="text-gray-400 hover:text-green-500">Privacy</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="social-icon text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon text-xl"><i class="fab fa-spotify"></i></a>
+                    <a href="#" class="social-icon text-xl"><i class="fab fa-apple"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-500 text-sm">
+                <p>© 2023 Don Hu. All rights reserved. Dark Jungle is a registered trademark.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const releaseDate = new Date('Nov 15, 2023 00:00:00').getTime();
+            const distance = releaseDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                })
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=SudoBrt7/music" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
